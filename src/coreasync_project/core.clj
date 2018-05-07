@@ -25,6 +25,19 @@
         (async/>! worker-chan n)))
 
     worker-chan))
+    
+(defn result(chan 10))
+
+(pipeline
+  4
+  result
+  (filter even?)
+  (and customers workers))
+
+(go-loop[]
+  (fib 10)
+
+
 
 (defn -main
   "I don't do a whole lot ... yet."
