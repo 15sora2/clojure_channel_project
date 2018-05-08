@@ -25,17 +25,19 @@
         (async/>! worker-chan n)))
 
     worker-chan))
-    
-(defn result(chan 10))
+
+(defn result
+  println (fibn))
 
 (pipeline
   4
-  result
-  (filter even?)
-  (and customers workers))
+  [:customers, :workers, :result]
 
-(go-loop[]
-  (fib 10)
+  (defn f [{:customers, :workers}]
+    fibn = fin(n)
+    {:customers, :workers, :result(fibn)})
+
+    [:customers, :workers])
 
 
 
