@@ -33,7 +33,7 @@
   4
   [:customers, :workers, :result]
 
-  (defn f [{:customers, :workers}]
+  (defn f [{:customers, :workers, :result}]
     fibn = fin(n)
     {:customers, :workers, :result(fibn)})
 
